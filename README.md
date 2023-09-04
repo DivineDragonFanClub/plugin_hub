@@ -45,3 +45,9 @@ Here are some open-source plugins which can be looked at for reference, do keep 
 * [p5rcbt](https://github.com/Raytwo/p5rcbt), good introduction to hooks, inline hooks and organizing a project.
 * [ARCropolis](https://github.com/Raytwo/ARCropolis/tree/master), large scale plugin with multiple contributors and a lot of bad decisions. Has a ton of examples when it comes to modding techniques.
 * [aldebaran-rs](https://github.com/three-houses-research-team/aldebaran-rs/blob/master/src/forge.rs), FETH modloader, relatively simple to read and follow. Baby's first plugin level of difficulty.
+
+### Crate documentation
+Due to the early access aspect of plugin development, some repositories remain privates and that means the documentation cannot be published online.  
+
+As an alternative, you can locally clone the [engage](https://github.com/DivineDragonFanClub/engage) crate and run ``cargo skyline doc -o`` in the repository to get an overview of the library and what it has to offer.  
+It will be filled over time with more explanations of the various times and usage instructions.
