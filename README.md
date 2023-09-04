@@ -51,3 +51,9 @@ Due to the early access aspect of plugin development, some repositories remain p
 
 As an alternative, you can locally clone the [engage](https://github.com/DivineDragonFanClub/engage) crate and run ``cargo skyline doc -o`` in the repository to get an overview of the library and what it has to offer.  
 It will be filled over time with more explanations of the various types and usage instructions.
+
+## Switch crates
+Some crates are not compatible with the Switch out of the box for various reasons (OS-specific changes, ...) and it might happen that you cannot build when adding a dependency.  
+While this is unfortunate, not much can be done aside from forking and adapting the library to work on Switch if possible.
+
+The [skyline-rs/awesome-libraries](https://github.com/skyline-rs/awesome-libraries) repository contains a few examples of libraries that have been adapted by the community to work on Switch.
