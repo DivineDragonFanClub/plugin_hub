@@ -50,4 +50,4 @@ Here are some open-source plugins which can be looked at for reference, do keep 
 Due to the early access aspect of plugin development, some repositories remain privates and that means the documentation cannot be published online.  
 
 As an alternative, you can locally clone the [engage](https://github.com/DivineDragonFanClub/engage) crate and run ``cargo skyline doc -o`` in the repository to get an overview of the library and what it has to offer.  
-It will be filled over time with more explanations of the various times and usage instructions.
+It will be filled over time with more explanations of the various types and usage instructions.
