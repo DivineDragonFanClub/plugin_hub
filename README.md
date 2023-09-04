@@ -3,7 +3,8 @@
 GitHub decided Wikis aren't allowed on private repositories, so explanations will be provided here.
 
 ## Setup
-Make sure the Cobalt you use is [v0.28.0](https://github.com/Raytwo/Cobalt/releases/tag/v0.28.0) or higher
+Make sure the Cobalt you use is [v0.28.0](https://github.com/Raytwo/Cobalt/releases/tag/v0.28.0) or higher.  
+Plugins go in ``sd:/engage/plugins/`` as ``.nro`` files.
 
 1. Install [Rustup](https://rustup.rs/). When asked about what kind of toolchain you want between minimal or complete, pick the middle ground.
 2. Open a terminal and run ``cargo install cargo-skyline``
@@ -19,7 +20,7 @@ Make sure the Cobalt you use is [v0.28.0](https://github.com/Raytwo/Cobalt/relea
 It is recommended to use [VS Code](https://code.visualstudio.com/download) for Rust plugins, as well as the [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension.
 
 ## Resources and documentation
-Cobalt only support Rust plugins (C support will probably not be implemented), so it is recommended to get familiar with the language.  
+Cobalt only supports Rust plugins (C support will probably not be implemented), so it is recommended to get familiar with the language.  
 That being said, Cobalt plugins are not as complex and powerful as a desktop software and the necessary knowledge ceiling will not be the same.
 
 Assuming you already have a some familiarity with system programming (C, C++, C#, Rust, ...), you will have an easier time to adapt.
