@@ -1,0 +1,23 @@
+[package]
+name = "template"
+version = "0.1.0"
+authors = ["Your username or name here"]
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "0100a6301214e000" # Fire Emblem Engage
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = "0.2.0" # Contains the macros needed to install hooks.
+engage = { git = "https://github.com/DivineDragonFanClub/engage" } # Contains a set of functions and utilities to call the game's code.
+unity = { git = "https://github.com/DivineDragonFanClub/unity" } # Utilities to talk with Unity internals. You usually wouldn't need it unless what you want isn't in the engage crate.
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
