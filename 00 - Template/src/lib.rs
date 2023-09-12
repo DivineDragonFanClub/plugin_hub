@@ -1,3 +1,6 @@
+// Currently needed because we use these functionality, they'll be removable when the Rust language stabilizes them
+#![feature(lazy_cell, ptr_sub_ptr)]
+
 /// This is called a proc(edural) macro. You use this to indicate that a function will be used as a hook.
 ///
 /// Pay attention to the argument, offset.
@@ -17,7 +20,7 @@ pub fn my_hook() { // Usually you'd add arguments similar to the function you ar
 /// The internal name of your plugin. This will show up in crash logs. Make it 8 characters long at max.
 #[skyline::main(name = "myplugin")]
 pub fn main() {
-    /// Install a panic handler for your plugin, allowing you to customize what to do if there's an issue in your code.
+    // Install a panic handler for your plugin, allowing you to customize what to do if there's an issue in your code.
     std::panic::set_hook(Box::new(|info| {
         let location = info.location().unwrap();
 
