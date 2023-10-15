@@ -42,7 +42,8 @@ At this point, we can write a few quick hooks to confirm if this is the function
 pub fn fade_in_hud(this: *const u8, method_info: OptionalMethod) {
     println!("fade in hude");
     call_original!(this, method_info);
-}```
+}
+```
 
 (Include the hooking process for plugin users)
 
@@ -60,10 +61,12 @@ We take a gamble and check if just not returning here is sufficient (and safe!).
 pub fn fade_in_hud(this: *const u8, method_info: OptionalMethod) {
     println!("skip fading in hud");
     // call_original!(this, method_info);
-}```
+}
+```
 
 And it works!
 
 # Adding the configuration
+But maybe we want to be able to turn this on and off.
 (configuration stuff)
 
