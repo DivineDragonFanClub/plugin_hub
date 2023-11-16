@@ -23,9 +23,7 @@ impl ConfigBasicMenuItemGaugeMethods for PpSetting {
         if this.gauge_ratio != result {
             this.gauge_ratio = result;
 
-            unsafe {
-                configbasicmenuitem_update_text(this, None);
-            }
+            this.update_text();
             Self::set_help_text(this, None);
 
 
