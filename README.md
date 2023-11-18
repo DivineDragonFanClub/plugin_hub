@@ -1,12 +1,14 @@
-# Plugin EA
+# Cobalt's plugin development hub
+> [!WARNING]
+> Before proceeding with the instructions, please make yourself familiar with the [distribution guidelines](https://github.com/Raytwo/Cobalt/wiki/Plugin-loading#how-should-i-distribute-them).
 
-GitHub decided Wikis aren't allowed on private repositories, so explanations will be provided here.
+> [!WARNING]
+> Make sure the Cobalt version you use is v1.0.0 or higher.  
+
+> [!NOTE]
+> Plugins go in the [root of your mod](https://github.com/Raytwo/Cobalt/wiki/Managing-your-Mods) as ``.nro`` files.
 
 ## Setup
-> [!WARNING]
-> Make sure the Cobalt version you use is [v1.0.0](https://github.com/Raytwo/Cobalt/releases/tag/v0.28.0) or higher.  
-
-Plugins go in the [root of your mod](https://github.com/Raytwo/Cobalt/wiki/Managing-your-Mods) as ``.nro`` files.
 
 1. Install [Rustup](https://rustup.rs/). When asked about what kind of toolchain you want between minimal or complete, pick the middle ground.
 2. Open a terminal and run ``cargo install cargo-skyline``
