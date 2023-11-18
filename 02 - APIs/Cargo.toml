@@ -14,6 +14,7 @@ crate-type = ["cdylib"]
 skyline = "0.2.0"
 engage = { version = "0.2.0", git = "https://github.com/DivineDragonFanClub/engage" } # Contains a set of functions and utilities to call the game's code.
 unity = { version = "0.2.0", git = "https://github.com/DivineDragonFanClub/unity" } # Utilities to talk with Unity internals. You usually wouldn't need it unless what you want isn't in the engage crate.
+cobapi = { version = "0.1.0", git = "https://github.com/DivineDragonFanClub/cobapi" } # Utilities to talk with Cobalt.
 
 [profile.dev]
 panic = "abort"
