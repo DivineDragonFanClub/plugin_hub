@@ -46,6 +46,7 @@ The skyline-rs template and Wiki are a good introduction to the basics of the la
 
 ### Real-life example(s)
 Here are some open-source plugins which can be looked at for reference, do keep in mind that they do not use anything Cobalt-specific.
+* [spgainmod](https://github.com/DeathChaos25/libspgainmod), concrete usage of plugin code and the Cobalt API to tweak SP gain.
 * [p5rcbt](https://github.com/Raytwo/p5rcbt), good introduction to hooks, inline hooks and organizing a project.
 * [ARCropolis](https://github.com/Raytwo/ARCropolis/tree/master), large scale plugin with multiple contributors and a lot of bad decisions. Has a ton of examples when it comes to modding techniques.
 * [aldebaran-rs](https://github.com/three-houses-research-team/aldebaran-rs/blob/master/src/forge.rs), FETH modloader, relatively simple to read and follow. Baby's first plugin level of difficulty.
