@@ -37,7 +37,7 @@ Combat.CombatWorld$$FadeOutHUD
 
 At this point, we can write a few quick hooks to confirm if this is the function we're looking for.
 
-```
+```rust
 #[skyline::hook(offset = 0x29368f0)] // update with the named hooking method
 pub fn fade_in_hud(this: *const u8, method_info: OptionalMethod) {
     println!("fade in hude");
@@ -56,7 +56,7 @@ Great, it does seem like this is what the game uses.
 # Implementation
 We take a gamble and check if just not returning here is sufficient (and safe!).
 
-```
+```rust
 #[skyline::hook(offset = 0x29368f0)] // update with the named hooking method
 pub fn fade_in_hud(this: *const u8, method_info: OptionalMethod) {
     println!("skip fading in hud");
