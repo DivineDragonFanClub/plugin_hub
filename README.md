@@ -11,10 +11,11 @@
 ## Setup
 
 1. Install [Rustup](https://rustup.rs/). When asked about what kind of toolchain you want between minimal or complete, pick the middle ground.
-2. Open a terminal and run ``cargo install cargo-skyline``
-3. Prepare a directory where you'd like to store your plugin's project
-4. In that directory, run ``cargo skyline new`` followed by your project's name (no space)
-5. You'll be prompted to install the Rust STD. This is a heavy and lengthy download, so confirm and do something else for 5-10 minutes. This is a one time process.
+2. Install [git](https://git-scm.com/downloads). Default settings are fine.
+3. Open a terminal and run ``cargo install cargo-skyline``
+4. Prepare a directory where you'd like to store your plugin's project
+5. In that directory, run ``cargo skyline new`` followed by your project's name (no space)
+6. You'll be prompted to install the Rust STD. This is a heavy and lengthy download, so confirm and do something else for 5-10 minutes. This is a one time process.
 
 ## Build
 1. Your project can be built by running ``cargo skyline build --release`` inside of the project's directory.
