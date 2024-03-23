@@ -53,7 +53,7 @@ Here are some open-source plugins which can be looked at for reference, do keep 
 * [aldebaran-rs](https://github.com/three-houses-research-team/aldebaran-rs/blob/master/src/forge.rs), FETH modloader, relatively simple to read and follow. Baby's first plugin level of difficulty.
 
 ### Crate documentation 
-Unity: [documentation](https://divinedragonfanclub.github.io/unity/unity/index.html)
+Unity: [documentation](https://divinedragonfanclub.github.io/unity/unity/index.html)  
 Engage: [documentation](https://divinedragonfanclub.github.io/engage/engage/index.html)
 
 ## Switch crates
