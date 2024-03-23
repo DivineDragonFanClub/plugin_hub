@@ -52,11 +52,9 @@ Here are some open-source plugins which can be looked at for reference, do keep 
 * [ARCropolis](https://github.com/Raytwo/ARCropolis/tree/master), large scale plugin with multiple contributors and a lot of bad decisions. Has a ton of examples when it comes to modding techniques.
 * [aldebaran-rs](https://github.com/three-houses-research-team/aldebaran-rs/blob/master/src/forge.rs), FETH modloader, relatively simple to read and follow. Baby's first plugin level of difficulty.
 
-### Crate documentation
-Due to the early access aspect of plugin development, some repositories remain privates and that means the documentation cannot be published online.  
-
-As an alternative, you can locally clone the [engage](https://github.com/DivineDragonFanClub/engage) crate and run ``cargo skyline doc -o`` in the repository to get an overview of the library and what it has to offer.  
-It will be filled over time with more explanations of the various types and usage instructions.
+### Crate documentation 
+Unity: [documentation](https://divinedragonfanclub.github.io/unity/unity/index.html)
+Engage: [documentation](https://divinedragonfanclub.github.io/engage/engage/index.html)
 
 ## Switch crates
 Some crates are not compatible with the Switch out of the box for various reasons (OS-specific changes, ...) and it might happen that you cannot build when adding a dependency.  
