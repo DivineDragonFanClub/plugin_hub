@@ -1,0 +1,6 @@
+[book]
+authors = ["Raytwo"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Cobalt Plugin Book"
