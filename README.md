@@ -33,17 +33,18 @@ Assuming you already have a some familiarity with system programming (C, C++, Ru
 However, be prepared to lose some of your programming habits as Rust is stricter when it comes to memory and ownership of values and you will definitely get slapped on the wrist for things that you think would've been OK in another language.  
 It is mostly explained by the fact that Rust looks out for you and make sure that you don't compile code that *could* break. You might be annoyed by this at first, but see it as a training to write better code in other languages down the road!
 
-### Learning the language
-Quick route for impatient people with programming knowledge:
-* [Rust by example](https://doc.rust-lang.org/rust-by-example/)
 
+### Introduction to plugins
+The skyline-rs template and Wiki are a good introduction to the basics of the language and the hooking system
+* [Skyline-rs Wiki](https://github.com/ultimate-research/skyline-rs-template/wiki)
+* [Plugin sample](https://github.com/ultimate-research/skyline-rs-template)
+
+### Learning the language
 Normal route for beginners or people who would like to understand the language deeper:
 * [The Rust Programming Language Book](https://doc.rust-lang.org/book/) (free and online, a physical book exists)
 
-### Plugin-specific
-The skyline-rs template and Wiki are a good introduction to the basics of the language and the hooking system
-* [Template](https://github.com/ultimate-research/skyline-rs-template)
-* [Wiki](https://github.com/ultimate-research/skyline-rs-template/wiki)
+Quick route for impatient people with programming knowledge:
+* [Rust by example](https://doc.rust-lang.org/rust-by-example/)
 
 ### Real-life example(s)
 Here are some open-source plugins which can be looked at for reference, do keep in mind that they do not use anything Cobalt-specific.
