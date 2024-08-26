@@ -6,14 +6,14 @@ The first step is to install Rust. Considering the official book already does a 
 
 ### Installing Git
 
-Git is a version control system. It is used to manage your coding projects by taking "snapshots" of your code as key points in time, collaborate with other people, distribution and so on.  
+Git is a version control system. It is used to manage your coding projects by taking "snapshots" of your code at key points in time, collaborate with other people, distribute binaries and so on.  
 This book will not teach you how to use it, but it is important to have it on your system to follow the next steps smoothly.
 
-Head over to [the official website](https://git-scm.com/downloads) and install the appropriate version for your operating system. The default settings are perfectly fine for our purpose, but feel free to tweak them if you are familiar with it!
+Head over to [the official website](https://git-scm.com/downloads) and install the appropriate version for your operating system. The default settings are perfectly fine for our use case, but feel free to tweak them if you are familiar with it!
 
 ### Installing cargo-skyline
 
-Cargo-skyline is a command-line interface tool used to facilitate compiling Rust code for the Nintendo Switch as well as listen to logging messages from your console.
+Cargo-skyline is a command-line interface tool used to facilitate compiling Rust code for the Nintendo Switch as well as listening to logging messages from your console.
 
 To install it, open a terminal and type the following command:
 ```console

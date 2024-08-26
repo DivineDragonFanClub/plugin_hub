@@ -11,11 +11,11 @@ Using a terminal, navigate to the workspace you previously created during the In
 ```console
 cargo skyline new hello_world
 ```
-> The very first time you create a project with cargo-skyline in a directory, you will be prompted to download the source code for the Rust language. It is a necessary step to build Rust programs that are capable of using the Nintendo Switch features and should last between 3 and 10 minutes depending on your download speed.
+> The very first time you create a project with cargo-skyline in a directory, you will be prompted to download the source code for the Rust language. It is a necessary step to build Rust programs that are capable of using the Nintendo Switch features and should take between 3 and 10 minutes depending on your download speed.
 
 ### Compiling
 
-You've just create a new Skyline Plugin project, so let's go through the compilation steps.
+You've just created a new Skyline Plugin project, so let's go through the compilation steps.
 
 Before loading it through Cobalt, you must compile your plugin using cargo-skyline by entering the following command in the directory:
 

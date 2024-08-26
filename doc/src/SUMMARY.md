@@ -11,4 +11,4 @@
 ## Skyline
 
 - [Skyline Plugins](./ch02-00-skyline-plugins.md)
-    - [Template](./ch02-01-template.md)
+    - [Analyzing the Template](./ch02-01-analyzing-template.md)

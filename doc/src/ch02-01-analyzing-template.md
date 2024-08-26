@@ -1,6 +1,6 @@
-## Template
+## Analyzing the Template
 
-Let's start learning about Skyline by analyzing the project you've initialized in the previous chapter! If you check out the *lib.rs* file inside of your plugin's */src* directory, you'll be greeted with the following:
+Let's start learning about Skyline by analyzing the project you've set up in the previous chapter! If you check out the *lib.rs* file inside of your plugin's */src* directory, you'll be greeted with the following:
 
 ```rust
 #[skyline::main(name = "hello_world")]
@@ -36,7 +36,7 @@ Now, let's look at the inside of your ``entry point``, which has a single functi
 println!("Hello from skyline plugin");
 ```
 
-As the name might imply, ``println!`` is a [macro](https://doc.rust-lang.org/book/ch19-06-macros.html) (yes!) to print text and it stands for ``print line new.  
+As the name might imply, ``println!`` is a [macro](https://doc.rust-lang.org/book/ch19-06-macros.html) (yes!) to print text and it stands for ``print line new``.  
 
 You might be wondering where exactly text would be printed on a Nintendo Switch and the answer is: it depends.
 
