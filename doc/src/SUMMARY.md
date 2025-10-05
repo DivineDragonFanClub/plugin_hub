@@ -25,4 +25,7 @@
     - [Unity Crate](./ch04-02-unity.md)
     - [Engage Crate](./ch04-03-engage.md)
     - [CobAPI Crate](./ch04-04-cobapi.md)
-    - [Basic Example](./ch04-05-basic-example.md)
+    - [Basic Example Part 1](./ch04-05-basic-example-01.md)
+    - [Basic Example Part 2](./ch04-06-basic-example-02.md)
+    - [Basic Example Part 3](./ch04-07-basic-example-03.md)
+

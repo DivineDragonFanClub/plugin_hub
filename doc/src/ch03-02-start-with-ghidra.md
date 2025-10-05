@@ -16,6 +16,6 @@ On the right is the Decompiler Window, it shows the currently selected function 
 
 ![Decompiler](assets/decompiler.png)
 
-Lastly in the middle is the Disassembly. It is the disassembled data of the program. This contains functions, strings and more. A basic understanding of assembly is very useful for Ghidra as pseudo code may not be entirely accurate, this [resource](https://mariokartwii.com/armv8/) is a great beginner's guide.
+Lastly in the middle is the Disassembly. It is the disassembled data of the program. This contains functions, strings and more. A basic understanding of assembly is very useful for Ghidra as pseudo code may not be entirely accurate, this [resource](https://mariokartwii.com/armv8/) is a great beginner's guide. The program has an offset of 7100000000, so any offsets from here should be reduced by that value.
 
 ![Disassembly](assets/disassembly.png)
