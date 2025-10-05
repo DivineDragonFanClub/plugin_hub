@@ -1,4 +1,4 @@
-## Installation
+# Installation
 
 The first step is to install Rust. Considering the official book already does a good job of explaining the process (as well as being available in multiple languages), please head over to [The Rust Programming Language book](https://doc.rust-lang.org/book/ch01-01-installation.html) to find out how to install it for your device.
 

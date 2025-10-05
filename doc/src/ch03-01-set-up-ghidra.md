@@ -1,0 +1,3 @@
+# Setting up Ghidra
+
+With Ghidra downloaded and install, open it and create a new non-shared project. Next install the [Ghidra NSO Loader](https://github.com/StevensND/Ghidra-Switch-Loader/releases) through File >  Install Extensions and click the green plus icon. With that installed, you now need the project for version 2.0.0, it can be obtained by joining the [Divorce Server](https://discord.gg/aP6xWBvCtQ) and following this [link](https://discord.com/channels/1081322520516493384/1160306021814763620/1180541056899612762). Drag it into the project window and click Ok, wait for it to finish and you can double click it open it.
