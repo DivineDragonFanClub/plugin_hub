@@ -18,3 +18,11 @@
     - [Setting Up Ghidra](./ch03-01-set-up-ghidra.md)
     - [Starting with Ghidra](./ch03-02-start-with-ghidra.md)
     - [Analyzing a Function](./ch03-03-analyzing-a-function.md)
+
+## Code Modding with Rust
+- [Rust Introduction](./ch04-00-rust-intro.md)
+    - [Crates](./ch04-01-crates.md)
+    - [Unity Crate](./ch04-02-unity.md)
+    - [Engage Crate](./ch04-03-engage.md)
+    - [CobAPI Crate](./ch04-04-cobapi.md)
+    - [Basic Example](./ch04-05-basic-example.md)
