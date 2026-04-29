@@ -1,4 +1,5 @@
-# Basic Example Continued
+# Old Example Part 2
+
 
 Now that we got our hook running, let us try and recreate the function using the Ghidra decompile as reference. For now, lets just rewrite it how we see it.
 

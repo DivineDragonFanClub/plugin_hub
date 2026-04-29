@@ -2,13 +2,13 @@
 
 Crates are a library that gives us more functionality in Rust without needing to rewrite structures and functions every time we make a new project. There are three primary crates we use in code modding:
 
-### Unity
+### Unity2
  
- This crate lets us interface with Il2Cpp with it's structures.
+ This crate lets us interface with Il2Cpp with it's structures. Unity2 is a newer version of the crate and should be used for new projects.
 
- ### Engage
+ ### Engage2
 
- This crate lets us interface with Engage, accessing it's game data and internal processes.
+ This crate lets us interface with Engage, accessing it's game data and internal processes. Engage2 is a newer version of the crate and should be used for new projects. 
 
  ### CobAPI
 
