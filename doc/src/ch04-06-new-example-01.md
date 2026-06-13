@@ -10,7 +10,7 @@ We will begin with adding the unity crate. We can add the crate by opening a ter
 ```rs
 use unity2::prelude::*;
 
-#[skyline::main(name = "book-example-2")]
+#[skyline::main(name = "book-example-3")]
 pub fn main() {
     
 }
@@ -151,7 +151,7 @@ pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod)
     println!("Howdy");
     level
 }
-#[skyline::main(name = "book-example-2")]
+#[skyline::main(name = "book-example-3")]
 pub fn main() {
     skyline::install_hook!(jobdata_getlearnjobskilllevel);
 }
