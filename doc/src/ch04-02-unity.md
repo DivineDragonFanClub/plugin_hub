@@ -38,24 +38,6 @@ pub fn unit_getjobname(this: Unit, method_info: OptionalMethod) -> Il2CppString;
 
 Often you will see this and method in the Ghidra decompiler as arguments for functions, most functions have these somewhere in their arguments often with this being the first and method being last. It is essentially you follow the naming scheme for these arguments. The hook will fail if these arguments are present in the Ghidra decompile and not present in the Rust function. Appending an underscore to these arguments if they are not used will typically be fine.
 
-### Class
-
-Class is another macro to help us define structures in Rust. Much like with hook with a function, it should be called before defining a structure. You can call it with the macro `#[unity2::class()]`. An example of a real class macro call would look like `#[unity2::class(namespace="App")]`, then define the class as the struct name. Doing this simply associates this structure with the one in the code, if we want to access it's field, we still need to define them in our Rust code. You should open the data type and reference the fields in Ghidra in order to properly define the fields. You may add padding to define fields that you don't need but are between fields you do, just be sure the offsets and sizes are correct or the fields will be misaligned. Below is an example of a defined structure:
-
-```rs
-#[unity2::class(namespace = "App")]
-pub struct Unit {
-    #[rename(name = "m_Prev")]
-    #[readonly]
-    pub prev: Unit,
-    #[rename(name = "m_Next")]
-    #[readonly]
-    pub next: Unit,
-    #[rename(name = "m_LastPickVoice")]
-    pub last_pick_voice: i8,
-}
-```
-
 ### Il2CppString
 
 An Il2CppString is a representation of an C# string used by Il2Cpp. It is a type alias for `Il2CppObject<SystemString>`. We can create a new Il2CppString using the `new()` function and with a str as the input. To convert from an Il2CppString to a String in Rust, we must use the function `to_rust_string()`
