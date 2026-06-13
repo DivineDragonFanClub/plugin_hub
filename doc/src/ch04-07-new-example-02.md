@@ -5,18 +5,20 @@ Now that we got our hook running, let us try and recreate the function using the
 
 ### Recreating the Function
 
-We can see `(this->fields)._MaxLevel_k__BackingField` in the if statement, the predefined JobData structure has this as a field defined for us. We can access this value using `this.max_level()`. You can consult the crate documentation or source code to determine what fields are public in a structure.
+We can see `(this->fields)._MaxLevel_k__BackingField` in the if statement, the predefined JobData structure has this as a field defined for us. We can access this value using `this.get_max_level()`. You can consult the crate documentation or source code to determine what fields are public in a structure.
 
 ```rs
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 0x19;
-    if this.max_level() < 0x28 {
+    if this.get_max_level() < 0x28 {
         let level = 5;
     }
     level
 }
 ```
+
+However, we will get an error doing this, `"no method named get_max_level found for struct JobData in the current scope items from traits can only be used if the trait is in scope`. This is because while we do have the JobData structure imported, we are not importing it's methods. We can fix it by importing `engage_il2cpp::app::IJobDataMethods`. With that, our code should now compile properly.
 
 ### Fixing Functionality
 
@@ -26,7 +28,7 @@ This function looks like the decompile, but we can build it and see it will not 
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 0x19;
-    if this.max_level() < 0x28 {
+    if this.get_max_level() < 0x28 {
         let level = 5;
     }
     level
@@ -39,7 +41,7 @@ The fix is rather simple, we can just return in the if statement.
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 25;
-    if this.max_level() < 40 {
+    if this.get_max_level() < 40 {
         let level = 5;
         return level;
     }
@@ -57,7 +59,7 @@ Next, let's rewrite it and make it return 5 for classes that do not have a max l
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let mut level = 25;
-    if this.max_level() < 40 {
+    if this.get_max_level() < 40 {
         level = 5;
     }
     level
@@ -68,7 +70,7 @@ This looks more similar to the decompiled function.
 ```rs
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
-    if this.max_level() < 40 {
+    if this.get_max_level() < 40 {
         5
     } else {
         25
@@ -93,7 +95,7 @@ You may have noticed during the building of the nro, a warning was in the consol
 We should also add panic handling to our plugin. When the plugin panic, it will give us more information on where and why. The [Template](https://github.com/DivineDragonFanClub/plugin_hub/blob/master/00%20-%20Template/src/lib.rs) in the [plugin_hub repo](https://github.com/DivineDragonFanClub/plugin_hub) gives us a good one to start. Lets add that to our main function, we can remove the comments from it. We also will change the text a bit to make it more specific to our plugin, changing the error code also will allow us to identify it as our plugin.
 
 ```rs
-#[skyline::main(name = "book-example-2")]
+#[skyline::main(name = "book-example-3")]
 pub fn main() {
     std::panic::set_hook(Box::new(|info| {
         let location = info.location().unwrap();
@@ -121,7 +123,7 @@ pub fn main() {
         );
     }));
     
-    skyline::install_hook!(jobdata_getlearnjobskilllevel);
+    skyline::install_hook!(jobdata_get_learn_job_skill_level);
 }
 ```
 

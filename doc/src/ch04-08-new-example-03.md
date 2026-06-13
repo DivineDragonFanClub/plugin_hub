@@ -15,8 +15,8 @@ The jid field is an Il2CppString, as mentioned in the unity crate page, we can u
 ```rs
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, _method_info: OptionalMethod) -> i32 {
-    if this.max_level() < 40 {
-        if this.jid().to_rust_string() == "JID_ジェネラル" {
+    if this.get_max_level() < 40 {
+        if this.get_jid().to_rust_string() == "JID_ジェネラル" {
             20
         } else {
             5
@@ -38,13 +38,13 @@ Our added logic works and General learns it's skill at level 20.
 Congratulations, you have successfully recreated a function's logic and added your own. As a frame of reference, the example we used for this example is as follows:
 
 ```rs
-use engage2::{IJobData, JobData};
-use unity2::prelude::*;
+use engage_il2cpp::app::{IJobDataMethods, jobdata::JobData};
+use unity2::OptionalMethod;
 
 #[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
-pub fn jobdata_getlearnjobskilllevel(this: JobData, _method_info: OptionalMethod) -> i32 {
-    if this.max_level() < 40 {
-        if this.jid().to_rust_string() == "JID_ジェネラル" {
+pub fn jobdata_get_learn_job_skill_level(this: JobData, _method_info: OptionalMethod) -> i32 {
+    if this.get_max_level() < 40 {
+        if this.get_jid().to_rust_string() == "JID_ジェネラル" {
             20
         } else {
             5
@@ -52,9 +52,11 @@ pub fn jobdata_getlearnjobskilllevel(this: JobData, _method_info: OptionalMethod
     } else {
         25
     }
+
 }
 
-#[skyline::main(name = "book-example-2")]
+
+#[skyline::main(name = "book-example-3")]
 pub fn main() {
     std::panic::set_hook(Box::new(|info| {
         let location = info.location().unwrap();
@@ -82,7 +84,6 @@ pub fn main() {
         );
     }));
     
-    skyline::install_hook!(jobdata_getlearnjobskilllevel);
+    skyline::install_hook!(jobdata_get_learn_job_skill_level);
 }
-
 ```
