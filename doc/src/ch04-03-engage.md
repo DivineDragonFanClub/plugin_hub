@@ -2,7 +2,7 @@
 
 The most useful crate for manipulating game data and more. The Engage crate lets us access the game's specific internals through the code itself. We can access XML data in structures, Unit data, Save data and more.
 
-You can find the crate's source code [here](https://github.com/DivineDragonFanClub/engage-il2cpp).
+You can find the crate's source code [here](https://github.com/DivineDragonFanClub/engage-il2cpp) and documentation [here](https://divinedragonfanclub.github.io/engage-il2cpp/engage/index.html).
 
 # Extension
 

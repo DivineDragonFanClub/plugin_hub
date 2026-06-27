@@ -13,7 +13,7 @@ To identify General as the class in JobData, we need to check one of it's fields
 The jid field is an Il2CppString, as mentioned in the unity crate page, we can use `to_rust_string()` to convert it to a rust string. Alternatively, we can make a new Il2CppString from `JID_ジェネラル`. We can write the function as below:
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, _method_info: OptionalMethod) -> i32 {
     if this.get_max_level() < 40 {
         if this.get_jid().to_rust_string() == "JID_ジェネラル" {
@@ -38,10 +38,10 @@ Our added logic works and General learns it's skill at level 20.
 Congratulations, you have successfully recreated a function's logic and added your own. As a frame of reference, the example we used for this example is as follows:
 
 ```rs
-use engage_il2cpp::app::{IJobDataMethods, jobdata::JobData};
-use unity2::OptionalMethod;
+use engage::app::{IJobDataMethods, jobdata::JobData};
+use unity::OptionalMethod;
 
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_get_learn_job_skill_level(this: JobData, _method_info: OptionalMethod) -> i32 {
     if this.get_max_level() < 40 {
         if this.get_jid().to_rust_string() == "JID_ジェネラル" {

@@ -22,7 +22,7 @@
 ## Code Modding with Rust
 - [Rust Introduction](./ch04-00-rust-intro.md)
     - [Crates](./ch04-01-crates.md)
-    - [Unity2 Crate](./ch04-02-unity.md)
+    - [Unity-Nx Crate](./ch04-02-unity.md)
     - [Engage-Il2Cpp Crate](./ch04-03-engage.md)
     - [CobAPI Crate](./ch04-04-cobapi.md)
     - [New Crates Example](./ch04-05-new-example.md)

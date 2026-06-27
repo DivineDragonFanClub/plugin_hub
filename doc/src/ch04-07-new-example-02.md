@@ -8,7 +8,7 @@ Now that we got our hook running, let us try and recreate the function using the
 We can see `(this->fields)._MaxLevel_k__BackingField` in the if statement, the predefined JobData structure has this as a field defined for us. We can access this value using `this.get_max_level()`. You can consult the crate documentation or source code to determine what fields are public in a structure.
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 0x19;
     if this.get_max_level() < 0x28 {
@@ -18,14 +18,14 @@ pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod)
 }
 ```
 
-However, we will get an error doing this, `"no method named get_max_level found for struct JobData in the current scope items from traits can only be used if the trait is in scope`. This is because while we do have the JobData structure imported, we are not importing it's methods. We can fix it by importing `engage_il2cpp::app::IJobDataMethods`. With that, our code should now compile properly.
+However, we will get an error doing this, `"no method named get_max_level found for struct JobData in the current scope items from traits can only be used if the trait is in scope`. This is because while we do have the JobData structure imported, we are not importing it's methods. We can fix it by importing `engage::app::IJobDataMethods`. With that, our code should now compile properly.
 
 ### Fixing Functionality
 
 This function looks like the decompile, but we can build it and see it will not function the same, the level will always return 25, lets convert the hex to decimal to start.
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 0x19;
     if this.get_max_level() < 0x28 {
@@ -38,7 +38,7 @@ pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod)
 The fix is rather simple, we can just return in the if statement.
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let level = 25;
     if this.get_max_level() < 40 {
@@ -56,7 +56,7 @@ While this does work, it's not the best as it is now, we can try and rewrite it 
 Next, let's rewrite it and make it return 5 for classes that do not have a max level of 40, we have multiple approaches to this. First, lets make level mutable so we can change it's value in the if statement. An alterantive we will also explore is making it an if else statement. Any approach can be taken, but some may be better than others. Below are both:
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     let mut level = 25;
     if this.get_max_level() < 40 {
@@ -68,7 +68,7 @@ pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod)
 This looks more similar to the decompiled function.
 
 ```rs
-#[unity2::hook("App", "JobData", "GetLearnJobSkillLevel")]
+#[unity::hook("App", "JobData", "GetLearnJobSkillLevel")]
 pub fn jobdata_getlearnjobskilllevel(this: JobData, method_info: OptionalMethod) -> i32 {
     if this.get_max_level() < 40 {
         5

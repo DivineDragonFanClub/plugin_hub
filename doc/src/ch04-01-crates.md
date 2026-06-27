@@ -2,9 +2,9 @@
 
 Crates are a library that gives us more functionality in Rust without needing to rewrite structures and functions every time we make a new project. There are three primary crates we use in code modding:
 
-### Unity2
+### Unity-Nx
  
-This crate lets us interface with Il2Cpp with it's structures. Unity2 is a newer version of the crate and should be used for new projects.
+This crate lets us interface with Il2Cpp with it's structures. Unity-Nx is a newer version of the crate and should be used for new projects.
 
 ### Engage-Il2Cpp
 
